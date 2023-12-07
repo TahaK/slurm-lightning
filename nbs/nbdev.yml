@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "slurm-lightning"
+  site-url: "https://TahaK.github.io/slurm-lightning"
+  description: "This repo aims at providing a template for a pytorch lightning model to be run on a Slurm cluster as part of the DSAI544 course and focuses on the OHEM and TRUBA clusters."
+  repo-branch: main
+  repo-url: "https://github.com/TahaK/slurm-lightning"
