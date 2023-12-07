@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "model.html",
+    "href": "model.html",
+    "title": "Model",
+    "section": "",
+    "text": "source\n\nLightningCifarClassifier\n\n LightningCifarClassifier (arch='resnet18')\n\nHooks to be used in LightningModule."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "slurm-lightning",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "slurm-lightning",
+    "section": "Install",
+    "text": "Install\npip install slurm_lightning"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "slurm-lightning",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  }
+]
