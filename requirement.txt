@@ -1,0 +1,6 @@
+torch
+torchvision
+lightning
+jsonargparse[signatures]
+wandb
+matplotlib
