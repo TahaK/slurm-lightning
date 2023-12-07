@@ -6,7 +6,7 @@
 #SBATCH --ntasks-per-node=1
 
 module load cuda/cuda-12.1-a100q
-module load ANACONDA/Anacon*da3-2023.03-python-3.9
+module load ANACONDA/Anaconda3-2023.03-python-3.9
 source /ari/progs/ANACONDA/Anaconda3-2023.03-python-3.9/etc/profile.d/conda.sh
 conda activate dsai544
 
