@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "slurm-lightning",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "slurm-lightning"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "slurm-lightning",
+    "section": "Install",
+    "text": "Install\npip install slurm_lightning",
+    "crumbs": [
+      "slurm-lightning"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "slurm-lightning",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "slurm-lightning"
+    ]
+  },
+  {
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "setup",
+    "section": "",
+    "text": "## Correspondence annotator\n\n!pip install pixelstitch ipywidgets ipympl -qq\n\n\n!pip install ipython\n\nRequirement already satisfied: ipython in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (8.18.1)\nRequirement already satisfied: decorator in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from ipython) (5.1.1)\nRequirement already satisfied: jedi&gt;=0.16 in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from ipython) (0.19.1)\nRequirement already satisfied: matplotlib-inline in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from ipython) (0.1.6)\nRequirement already satisfied: prompt-toolkit&lt;3.1.0,&gt;=3.0.41 in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from ipython) (3.0.41)\nRequirement already satisfied: pygments&gt;=2.4.0 in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from ipython) (2.17.2)\nRequirement already satisfied: stack-data in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from ipython) (0.6.3)\nRequirement already satisfied: traitlets&gt;=5 in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from ipython) (5.14.0)\nRequirement already satisfied: pexpect&gt;4.3 in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from ipython) (4.9.0)\nRequirement already satisfied: parso&lt;0.9.0,&gt;=0.8.3 in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from jedi&gt;=0.16-&gt;ipython) (0.8.3)\nRequirement already satisfied: ptyprocess&gt;=0.5 in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from pexpect&gt;4.3-&gt;ipython) (0.7.0)\nRequirement already satisfied: wcwidth in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from prompt-toolkit&lt;3.1.0,&gt;=3.0.41-&gt;ipython) (0.2.12)\nRequirement already satisfied: executing&gt;=1.2.0 in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from stack-data-&gt;ipython) (2.0.1)\nRequirement already satisfied: asttokens&gt;=2.1.0 in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from stack-data-&gt;ipython) (2.4.1)\nRequirement already satisfied: pure-eval in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from stack-data-&gt;ipython) (0.2.2)\nRequirement already satisfied: six&gt;=1.12.0 in /home/taha/Workspace/Github/slurm-lightning/.env/lib/python3.11/site-packages (from asttokens&gt;=2.1.0-&gt;stack-data-&gt;ipython) (1.16.0)\n\n\n\n!wget https://github.com/ducha-aiki/pixelstitch/archive/refs/heads/master.zip\n\n!unzip master\n\n\nimport os\nrootdir = 'pixelstitch-master/sample_project'\npairs = os.listdir(rootdir)\nimg_pairs_list = []\nfor p in pairs:\n    if p == '.DS_Store':\n        continue\n    cur_dir = os.path.join(rootdir, p)\n    img_pairs_list.append((os.path.join(cur_dir, '01.png'),\n                           os.path.join(cur_dir, '02.png'),\n                           os.path.join(cur_dir, 'corrs.txt')))\n\nprint (img_pairs_list)\n\n[('pixelstitch-master/sample_project/petrzin/01.png', 'pixelstitch-master/sample_project/petrzin/02.png', 'pixelstitch-master/sample_project/petrzin/corrs.txt'), ('pixelstitch-master/sample_project/ministry/01.png', 'pixelstitch-master/sample_project/ministry/02.png', 'pixelstitch-master/sample_project/ministry/corrs.txt')]\n\n\n\n\n\nAvailable matplotlib backends: ['tk', 'gtk', 'gtk3', 'gtk4', 'wx', 'qt4', 'qt5', 'qt6', 'qt', 'osx', 'nbagg', 'webagg', 'notebook', 'agg', 'svg', 'pdf', 'ps', 'inline', 'ipympl', 'widget']\n\n\n\n#from IPython.core.interactiveshell import InteractiveShell\n#InteractiveShell.ast_node_interactivity = \"all\"\n\n\n# %matplotlib widget\nfrom IPython.display import display\nfrom IPython.core.display import HTML\nfrom pixelstitch.core import *\n\n\nCA = CorrespondenceAnnotator(img_pairs_list, save_on_next=True)\n#display(HTML(\"&lt;style&gt;.container { width:95% !important; }&lt;/style&gt;\"))\n#CA.start(figsize=(12,7))\n\n\nfigsize=(15,8)\nidx = 0\nCA.state_dict['idx'] = 0\nCA.load_pair_into_statedict(idx)\n\nlibpng warning: iCCP: known incorrect sRGB profile\nlibpng warning: iCCP: known incorrect sRGB profile\n\n\n\nCA.initialize_ui(figsize=figsize)\n\n\n\n\n\n\n\n\nimport ipywidgets as wdg  # Using the ipython notebook widgets\nfrom ipywidgets import Button, HBox, VBox, Layout\nimport matplotlib.pyplot as plt\n\n\nplt.subplots(2, 2)\n\n\n\n\n\n\n\n(&lt;Figure size 640x480 with 4 Axes&gt;,\n array([[&lt;Axes: &gt;, &lt;Axes: &gt;],\n        [&lt;Axes: &gt;, &lt;Axes: &gt;]], dtype=object))\n\n\n\nfig, ((CA.ax1, CA.ax2), (CA.ax3, CA.ax4)) = plt.subplots(2, 2, figsize=figsize)\n\n\n\n\n\n\n\n\nCA.figure = fig\n\n\ngs = CA.ax3.get_gridspec()\n\n\nCA.ax3.remove()\nCA.ax4.remove()\nCA.ax3 = fig.add_subplot(gs[1, :])\n\n\nplt.tight_layout()\nCA.ln1, = CA.ax1.plot([], [], 'x', markersize=10, color='r')\nCA.ln2, = CA.ax2.plot([], [], 'x', markersize=10, color='r')\nCA.hp1, = CA.ax1.plot([], [], '-o', markersize=10, color='m')\nCA.hp2, = CA.ax2.plot([], [], '-o', markersize=10, color='m')\n\nCA.texts1 = [CA.ax1.text([], [], '', fontsize=12) for i in range(CA.max_pts)]\nCA.texts2 = [CA.ax2.text([], [], '', fontsize=12) for i in range(CA.max_pts)]\n#self.fig.tight_layout()\n\n\n\n\n\n\n\n\nCA.next_button = wdg.Button(description=\"Next\")\nCA.prev_button = wdg.Button(description=\"Prev\")\nCA.save_button = wdg.Button(description=\"Save points\")\nCA.clahe_button = wdg.Button(description='CLAHE')\nCA.homo_pick_button = wdg.Button(description='Pick 4 points for homography')\nCA.reset_view_button = wdg.Button(description='ResetView')\nCA.show_model_button = wdg.Button(description='ShowModel')\nCA.showcrossval_button = wdg.Button(description='NextCorrsValPoint')\nCA.showcrossvalall_button = wdg.Button(description='NextCorrsValAll')\nCA.model_selector = wdg.Dropdown(description='Model', options=CA.model_types,\n              value=CA.model_types[0], layout=Layout(width='10'))\nCA.img_selector = wdg.Dropdown(description='Tilt image', options=[0,1],\n              value=0, layout=Layout(width='10'))\n\nCA.homo_pick_button.on_click(CA.pick_homo)\nCA.next_button.on_click(CA.next_pair)\nCA.prev_button.on_click(CA.prev_pair)\nCA.save_button.on_click(CA.save_current_pts)\nCA.clahe_button.on_click(CA.show_clahed)\nCA.show_model_button.on_click(CA.show_model)\nCA.showcrossval_button.on_click(CA.show_crossval_single)\nCA.showcrossvalall_button.on_click(CA.show_crossval_all)\nCA.reset_view_button.on_click(CA.reset_view)\n\n\ndisplay(\n    wdg.VBox(\n        (wdg.HBox(\n            (CA.showcrossval_button,\n            CA.showcrossvalall_button,\n            CA.show_model_button,\n            CA.save_button,\n            CA.prev_button,\n            CA.next_button,\n            CA.clahe_button,\n            CA.model_selector)),\n        #self.vertical_tilt_slider,\n        wdg.HBox((CA.homo_pick_button,\n                 CA.reset_view_button))\n        #self.img_selector\n        )))\n\n\n\n\n\nCA.show_current_pair()\nCA.callback_ref = CA.figure.canvas.mpl_connect('button_press_event',\n                                                lambda event: self.process_user_click(event))",
+    "crumbs": [
+      "setup"
+    ]
+  },
+  {
+    "objectID": "model.html",
+    "href": "model.html",
+    "title": "Model",
+    "section": "",
+    "text": "source\n\nLightningCifarClassifier\n\n LightningCifarClassifier (arch='resnet18')\n\nHooks to be used in LightningModule.",
+    "crumbs": [
+      "Model"
+    ]
+  }
+]
