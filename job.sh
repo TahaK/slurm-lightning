@@ -10,12 +10,7 @@ module load ANACONDA/Anaconda3-2023.03-python-3.9
 source /ari/progs/ANACONDA/Anaconda3-2023.03-python-3.9/etc/profile.d/conda.sh
 conda activate dsai544
 
-#Girdi dosyalari kopyalaniyor
+# Girdi dosyalari kopyalaniyor
 # \cp -r   /ari/users/mkocyigit/dataset /YEREL
 
-# Calistirmak istedigimiz programa uygun parametrelerle /YEREL diskini kullanmasi soylenmeli
-# Tabiki kullanacaginiz programin parametreleri degisik olacaktir
-srun python slurm_lightning/train.py fit --trainer.max_epochs=40
-
-#Program bitince olusan ve saklamak istediklerimizi geri ev dizinine kopyalamali
-# \cp -r /YEREL/tb_logs /ari/users/mkocyigit/
+srun python /ari/users/mkocyigit/slurm-lightning/train.py fit --trainer.max_epochs=40

@@ -8,7 +8,7 @@ def main():
                       trainer_defaults={
                         'precision':"16-true",
                         'profiler':"simple",
-                        'logger': lazy_instance(WandbLogger,project="dsai544", log_model=True), 
+                        'logger': lazy_instance(WandbLogger,project="dsai544", log_model=True, save_dir="logs"), 
                      })
 
 if __name__ == "__main__":
